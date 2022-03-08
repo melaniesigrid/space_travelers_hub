@@ -5,15 +5,15 @@ import planet from '../images/planet.png';
 
 function NavBar() {
   return (
-    <Navbar expand="xxl" sticky="top" variant="light" bg="light" className="border-bottom Navbar">
+    <Navbar activeKey={window.location.pathname} expand="xxl" sticky="top" variant="light" bg="light" className="border-bottom Navbar">
       <Container>
-        <LinkContainer to="/" className="LogoContainer MyLink" rel="noopener noreferrer">
+        <LinkContainer to="/" className="LogoContainer" rel="noopener noreferrer">
           <Navbar.Brand>
             <img src={planet} alt="Planet logo" className="Logo" />
             Space Travelers&apos; Hub
           </Navbar.Brand>
         </LinkContainer>
-        <div className="ms-auto d-flex">
+        <Nav className="ms-auto d-flex">
           <LinkContainer to="/" rel="noopener noreferrer" className="MyLink">
             <Nav.Link>Rockets</Nav.Link>
           </LinkContainer>
@@ -23,9 +23,12 @@ function NavBar() {
           </LinkContainer>
 
           <LinkContainer to="/MyProfile/" className="MyLink" rel="noopener noreferrer">
-            <Nav.Link>My Profile</Nav.Link>
+            <Nav.Link>
+              <span className="Separator">|</span>
+              <span>My Profile</span>
+            </Nav.Link>
           </LinkContainer>
-        </div>
+        </Nav>
       </Container>
 
     </Navbar>

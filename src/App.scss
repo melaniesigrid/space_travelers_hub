@@ -11,10 +11,20 @@ a:active {
 .LogoContainer {
   display: flex;
   align-items: center;
+  font-size: 4rem;
 }
 
 .Logo {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.3rem;
+}
+
+.MyProfile {
+  border-left: 1px solid rgb(126, 126, 126);
+}
+
+.Separator {
   margin-right: 1rem;
+  font-weight: 400;
 }
