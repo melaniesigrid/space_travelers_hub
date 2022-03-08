@@ -10,23 +10,19 @@ function NavBar() {
           <img src={planet} alt="Planet logo" className="Logo" />
           <h1>Space Travelers&apos; Hub</h1>
         </NavLink>
-        <ul>
-          <li>
-            <NavLink to="/" activeClassName="selected" rel="noopener noreferrer">
-              Rockets
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Missions/" rel="noopener noreferrer">
-              Missions
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/MyProfile/" rel="noopener noreferrer">
-              My Profile
-            </NavLink>
-          </li>
-        </ul>
+
+        <NavLink to="/" activeClassName="selected" rel="noopener noreferrer">
+          Rockets
+        </NavLink>
+
+        <NavLink to="/Missions/" rel="noopener noreferrer">
+          Missions
+        </NavLink>
+
+        <NavLink to="/MyProfile/" rel="noopener noreferrer">
+          My Profile
+        </NavLink>
+
       </nav>
     </header>
   );
