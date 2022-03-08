@@ -1,4 +1,4 @@
-const GET_MISSIONS_SUCCESS = 'missionStore/missions/GET_MISSIONS_SUCCESS';
+const GET_MISSIONS_SUCCESS = 'applicationStore/missionsReducer/GET_MISSIONS_SUCCESS';
 const initialState = [];
 
 export const getMissionsSuccess = (payload) => ({
@@ -6,17 +6,17 @@ export const getMissionsSuccess = (payload) => ({
   payload,
 });
 
-const reducer = (state = initialState, action) => {
+const missions = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS_SUCCESS:
-      return [...action.payload];
+      return [...state, ...action.payload];
 
     default:
       return state;
   }
 };
 
-export default reducer;
+export default missions;
 
 const url = 'https://api.spacexdata.com/v3/missions';
 

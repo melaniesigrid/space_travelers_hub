@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { useSelector } from 'react-redux';
 import MissionList from './MissionList';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missionsReducer);
+  const missions = useSelector((state) => state.missions);
   return (
     <>
       <br />

@@ -5,7 +5,7 @@ import planet from '../images/planet.png';
 
 function NavBar() {
   return (
-    <Navbar activeKey={window.location.pathname} expand="xxl" sticky="top" variant="light" bg="light" className="border-bottom Navbar">
+    <Navbar activekey={window.location.pathname} expand="xxl" sticky="top" variant="light" bg="light" className="border-bottom Navbar">
       <Container>
         <LinkContainer to="/" className="LogoContainer" rel="noopener noreferrer">
           <Navbar.Brand>
