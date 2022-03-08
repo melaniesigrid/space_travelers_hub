@@ -1,12 +1,6 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { getRocketsApi } from '../redux/rockets';
+import React from 'react';
 
 function Rockets() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getRocketsApi());
-  }, []);
   return (
     <div>
       Rockets

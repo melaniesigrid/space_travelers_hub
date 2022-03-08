@@ -6,7 +6,7 @@ export const getMissionsSuccess = (payload) => ({
   payload,
 });
 
-const missionsReducer = (state = initialState, action) => {
+const missions = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS_SUCCESS:
       return [...state, ...action.payload];
@@ -16,7 +16,7 @@ const missionsReducer = (state = initialState, action) => {
   }
 };
 
-export default missionsReducer;
+export default missions;
 
 const url = 'https://api.spacexdata.com/v3/missions';
 

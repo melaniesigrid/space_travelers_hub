@@ -7,7 +7,7 @@ export const getRocketsAction = (payload) => ({
   payload,
 });
 
-const rocketsReducer = (state = initialState, action) => {
+const rockets = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
       return [...state, ...action.payload];
@@ -16,6 +16,8 @@ const rocketsReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default rockets;
 
 export const getRocketsApi = () => async (dispatch) => {
   const response = await fetch(rocketsUrl);
@@ -31,5 +33,3 @@ export const getRocketsApi = () => async (dispatch) => {
   });
   dispatch(getRocketsAction(formatRockets));
 };
-
-export default { rocketsReducer, getRocketsApi };
