@@ -1,3 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .LogoContainer {
   display: flex;
   align-items: center;

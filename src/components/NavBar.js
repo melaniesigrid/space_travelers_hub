@@ -1,30 +1,35 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import planet from '../images/planet.png';
 
 function NavBar() {
   return (
-    <header>
-      <nav>
-        <NavLink to="/" className="LogoContainer" rel="noopener noreferrer">
-          <img src={planet} alt="Planet logo" className="Logo" />
-          <h1>Space Travelers&apos; Hub</h1>
-        </NavLink>
+    <div>
+      <Navbar expand="md" fixed="top" variant="light" bg="light" className="border-bottom">
 
-        <NavLink to="/" activeClassName="selected" rel="noopener noreferrer">
-          Rockets
-        </NavLink>
+        <LinkContainer to="/" className="LogoContainer MyLink" rel="noopener noreferrer">
+          <Navbar.Brand>
+            <img src={planet} alt="Planet logo" className="Logo" />
+            Space Travelers&apos; Hub
+          </Navbar.Brand>
+        </LinkContainer>
+        <div className="ms-auto d-flex">
+          <LinkContainer to="/" rel="noopener noreferrer" className="MyLink">
+            <Nav.Link>Rockets</Nav.Link>
+          </LinkContainer>
 
-        <NavLink to="/Missions/" rel="noopener noreferrer">
-          Missions
-        </NavLink>
+          <LinkContainer to="/Missions/" className="MyLink" rel="noopener noreferrer">
+            <Nav.Link>Missions</Nav.Link>
+          </LinkContainer>
 
-        <NavLink to="/MyProfile/" rel="noopener noreferrer">
-          My Profile
-        </NavLink>
+          <LinkContainer to="/MyProfile/" className="MyLink" rel="noopener noreferrer">
+            <Nav.Link>My Profile</Nav.Link>
+          </LinkContainer>
+        </div>
 
-      </nav>
-    </header>
+      </Navbar>
+    </div>
   );
 }
 
