@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import MissionList from './MissionList';
 
-function Missions() {
-  const missions = useSelector((state) => state.missionsReducer);
+const Missions = () => {
+  const missions = useSelector((state) => state.missions);
   return (
     <>
       <br />
@@ -39,6 +39,6 @@ function Missions() {
 
     </>
   );
-}
+};
 
 export default Missions;
