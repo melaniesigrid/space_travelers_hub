@@ -1,13 +1,12 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import planet from '../images/planet.png';
 
 function NavBar() {
   return (
-    <div>
-      <Navbar expand="md" fixed="top" variant="light" bg="light" className="border-bottom">
-
+    <Navbar expand="xxl" fixed="top" variant="light" bg="light" className="border-bottom Navbar">
+      <Container>
         <LinkContainer to="/" className="LogoContainer MyLink" rel="noopener noreferrer">
           <Navbar.Brand>
             <img src={planet} alt="Planet logo" className="Logo" />
@@ -27,9 +26,10 @@ function NavBar() {
             <Nav.Link>My Profile</Nav.Link>
           </LinkContainer>
         </div>
+      </Container>
 
-      </Navbar>
-    </div>
+    </Navbar>
+
   );
 }
 
