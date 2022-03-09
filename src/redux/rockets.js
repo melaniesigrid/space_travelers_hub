@@ -1,4 +1,5 @@
-const GET_ROCKETS = 'applicationStore/rocketsReducer/GET_ROCKETS';
+const GET_ROCKETS = 'applicationStore/rockets/GET_ROCKETS';
+const RESERVE_ROCKET = 'applicationStore/rockets/RESERVE_ROCKET';
 const initialState = [];
 const rocketsUrl = 'https://api.spacexdata.com/v3/rockets';
 
@@ -7,10 +8,21 @@ export const getRocketsAction = (payload) => ({
   payload,
 });
 
+export const reserveRocket = (payload) => ({
+  type: RESERVE_ROCKET,
+  payload,
+});
+
 const rockets = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
       return [...state, ...action.payload];
+
+    case RESERVE_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: true };
+      });
 
     default:
       return state;
