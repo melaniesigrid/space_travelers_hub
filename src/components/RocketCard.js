@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Badge } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { reserveRocket, cancelRocket } from '../redux/rockets';
 
@@ -23,11 +23,24 @@ function RocketCard({
       <Card.Img variant="left" src={flickrImages} className="RocketImage" />
       <Card.Body>
         <Card.Title>{rocketName}</Card.Title>
-        <Card.Text>{description}</Card.Text>
         {
           reserved
-            ? <Button variant="outline-secondary" className="ReserveButton" onClick={() => cancelMyRocket(id)}>Cancel Rocket</Button>
-            : <Button variant="primary" className="ReserveButton" onClick={() => reserveMyRocket(id)}>Reserve Rocket</Button>
+            ? (
+              <div>
+                <Card.Text>
+                  <Badge bg="info">Reserved</Badge>
+                  {' '}
+                  {description}
+                </Card.Text>
+                <Button variant="outline-secondary" className="CancelButton" onClick={() => cancelMyRocket(id)}>Cancel Rocket</Button>
+              </div>
+            )
+            : (
+              <div>
+                <Card.Text>{description}</Card.Text>
+                <Button variant="primary" className="ReserveButton" onClick={() => reserveMyRocket(id)}>Reserve Rocket</Button>
+              </div>
+            )
         }
       </Card.Body>
     </Card>
