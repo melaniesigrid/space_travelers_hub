@@ -1,5 +1,6 @@
 const GET_ROCKETS = 'applicationStore/rockets/GET_ROCKETS';
 const RESERVE_ROCKET = 'applicationStore/rockets/RESERVE_ROCKET';
+const CANCEL_ROCKET_RESERVATION = 'applicationStore/rockets/CANCEL_ROCKET_RESERVATION';
 const initialState = [];
 const rocketsUrl = 'https://api.spacexdata.com/v3/rockets';
 
@@ -13,6 +14,11 @@ export const reserveRocket = (payload) => ({
   payload,
 });
 
+export const cancelRocket = (payload) => ({
+  type: CANCEL_ROCKET_RESERVATION,
+  payload,
+});
+
 const rockets = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
@@ -22,6 +28,12 @@ const rockets = (state = initialState, action) => {
       return state.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: true };
+      });
+
+    case CANCEL_ROCKET_RESERVATION:
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: false };
       });
 
     default:
@@ -40,6 +52,7 @@ export const getRocketsApi = () => async (dispatch) => {
       rocketName: e.rocket_name,
       description: e.description,
       flickrImages: e.flickr_images,
+      reserved: false,
     };
     return obj;
   });
