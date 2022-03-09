@@ -7,9 +7,6 @@ const MissionList = ({
   id, name, description, reserved,
 }) => {
   const dispatch = useDispatch();
-  const joinAMisson = (id) => {
-    dispatch(joinMission(id));
-  };
   return (
     <>
       <tr key={id}>
@@ -18,7 +15,7 @@ const MissionList = ({
         <td><span className="badge bg-secondary">Not a Member</span></td>
         <td>
           {
-          reserved === false ? <button type="button" className="btn btn-outline-secondary" onClick={() => joinAMisson(id)}>Join Mission</button>
+          reserved === false ? <button type="button" className="btn btn-outline-secondary" onClick={() => dispatch(joinMission(id))}>Join Mission</button>
             : <button type="button" className="btn btn-outline-info">Leave Mission</button>
           }
         </td>
