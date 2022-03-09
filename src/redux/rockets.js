@@ -25,9 +25,9 @@ export const getRocketsApi = () => async (dispatch) => {
   const formatRockets = rockets.map((e) => {
     const obj = {
       id: e.id,
-      rocket_name: e.rocket_name,
+      rocketName: e.rocket_name,
       description: e.description,
-      flickr_images: e.flickr_images,
+      flickrImages: e.flickr_images,
     };
     return obj;
   });

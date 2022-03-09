@@ -11,7 +11,10 @@ a:active {
 .LogoContainer {
   display: flex;
   align-items: center;
-  font-size: 4rem;
+}
+
+.SpaceTravelers .navbar-brand {
+  font-size: 6rem;
 }
 
 .Logo {
@@ -27,4 +30,29 @@ a:active {
 .Separator {
   margin-right: 1rem;
   font-weight: 400;
+}
+
+.HorizontalCard {
+  flex-direction: row !important;
+  margin: 2rem;
+}
+
+.RocketImage {
+  height: 15rem;
+  width: 20rem;
+}
+
+.ReserveButton {
+  margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .HorizontalCard {
+    flex-direction: column !important;
+    margin: 2rem;
+  }
+
+  .RocketImage {
+    width: 100%;
+  }
 }
