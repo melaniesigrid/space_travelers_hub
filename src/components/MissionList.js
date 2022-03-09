@@ -12,7 +12,13 @@ const MissionList = ({
       <tr key={id}>
         <th scope="row">{name}</th>
         <td className="w-50">{description}</td>
-        <td><span className="badge bg-secondary">Not a Member</span></td>
+        <td>
+          {
+        reserved
+          ? <span className="badge bg-info">Active Member</span>
+          : <span className="badge bg-secondary">Not a Member</span>
+          }
+        </td>
         <td>
           {
             reserved
