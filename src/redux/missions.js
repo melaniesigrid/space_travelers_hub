@@ -1,5 +1,6 @@
 const GET_MISSIONS_SUCCESS = 'applicationStore/missionsReducer/GET_MISSIONS_SUCCESS';
 const JOIN_MISSION = 'applicationStore/missionsReducer/JOIN_MISSION';
+const LEAVE_MISSION = 'applicationStore/missionsReducer/LEAVE_MISSION';
 const initialState = [];
 
 export const getMissionsSuccess = (payload) => ({
@@ -12,6 +13,11 @@ export const joinMission = (payload) => ({
   payload,
 });
 
+export const leaveMission = (payload) => ({
+  type: LEAVE_MISSION,
+  payload,
+});
+
 const missions = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS_SUCCESS:
@@ -21,6 +27,12 @@ const missions = (state = initialState, action) => {
       return state.map((mission) => {
         if (mission.mission_id !== action.payload) return mission;
         return { ...mission, reserved: true };
+      });
+
+    case LEAVE_MISSION:
+      return state.map((mission) => {
+        if (mission.mission_id !== action.payload) return mission;
+        return { ...mission, reserved: false };
       });
 
     default:
