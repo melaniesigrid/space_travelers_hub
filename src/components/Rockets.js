@@ -13,7 +13,7 @@ const Rockets = () => {
           <RocketCard
             key={rocket.id}
             id={rocket.id}
-            Rocket_Name={rocket.rocketName}
+            rocketName={rocket.rocketName}
             description={rocket.description}
             flickrImages={rocket.flickrImages[0]}
           />
