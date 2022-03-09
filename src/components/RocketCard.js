@@ -27,6 +27,7 @@ function RocketCard({
           reserved
             ? (
               <div>
+
                 <div className="CardTextContainer">
                   <Card.Text>
                     <Badge bg="info">Reserved</Badge>
