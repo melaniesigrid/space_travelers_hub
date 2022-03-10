@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component Renders correctly 1`] = `
+<nav
+  activekey="/"
+  className="border-bottom Navbar navbar navbar-expand-md navbar-light bg-light sticky-top"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="LogoContainer SpaceTravelers active navbar-brand"
+      href="/"
+      onClick={[Function]}
+      rel="noopener noreferrer"
+      style={Object {}}
+    >
+      <img
+        alt="Planet logo"
+        className="Logo"
+        src="planet.png"
+      />
+      Space Travelers' Hub
+    </a>
+    <div
+      className="ms-auto d-flex navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        className="MyLink nav-link"
+        data-rr-ui-event-key="/space_travelers_hub/"
+        disabled={false}
+        href="/space_travelers_hub/"
+        onClick={[Function]}
+        rel="noopener noreferrer"
+        style={null}
+      >
+        Rockets
+      </a>
+      <a
+        className="MyLink nav-link"
+        data-rr-ui-event-key="/Missions/"
+        disabled={false}
+        href="/Missions/"
+        onClick={[Function]}
+        rel="noopener noreferrer"
+        style={null}
+      >
+        Missions
+      </a>
+      <a
+        className="MyLink nav-link"
+        data-rr-ui-event-key="/MyProfile/"
+        disabled={false}
+        href="/MyProfile/"
+        onClick={[Function]}
+        rel="noopener noreferrer"
+        style={null}
+      >
+        <span
+          className="Separator"
+        >
+          |
+        </span>
+        <span>
+          My Profile
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>
+`;
