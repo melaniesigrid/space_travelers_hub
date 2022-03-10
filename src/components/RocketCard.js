@@ -35,7 +35,7 @@ function RocketCard({
                     {description}
                   </Card.Text>
                 </div>
-                <Button variant="outline-secondary" className="CancelButton" onClick={() => cancelMyRocket(id)}>Cancel Rocket</Button>
+                <Button variant="outline-danger" className="CancelButton" onClick={() => cancelMyRocket(id)}>Cancel Rocket</Button>
               </div>
             )
             : (
@@ -43,7 +43,7 @@ function RocketCard({
                 <div className="CardTextContainer">
                   <Card.Text>{description}</Card.Text>
                 </div>
-                <Button variant="primary" className="ReserveButton" onClick={() => reserveMyRocket(id)}>Reserve Rocket</Button>
+                <Button variant="outline-info" className="ReserveButton" onClick={() => reserveMyRocket(id)}>Reserve Rocket</Button>
               </div>
             )
         }

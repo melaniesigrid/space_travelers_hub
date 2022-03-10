@@ -48,15 +48,18 @@ a:active {
 
 .CardTextContainer {
   margin-top: 1.5rem;
-  height: 6rem;
 }
 
 .ReserveButton {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .CancelButton {
-  margin-top: 1em;
+  margin-top: 2em;
+}
+
+.ProfileContent {
+  margin-top: 3rem;
 }
 
 @media (max-width: 767px) {
