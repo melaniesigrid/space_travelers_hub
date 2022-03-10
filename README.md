@@ -14,7 +14,7 @@
 
 ## Live Demo 🚀
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://melaniesigrid.github.io/space_travelers_hub)
 
 
 ## Getting Started

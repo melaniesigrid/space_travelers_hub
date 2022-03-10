@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Rockets />} />
+        <Route path="/space_travelers_hub/" element={<Rockets />} />
         <Route path="/Missions/" element={<Missions />} />
         <Route path="/MyProfile/" element={<MyProfile />} />
       </Routes>
