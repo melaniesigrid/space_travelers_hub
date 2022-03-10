@@ -4,7 +4,7 @@
 
 > A web application for a company that provides commercial and scientific space travel services. This application users to book rockets and join selected space missions. Following medium-fidelity wireframe. Created using React, Bootstrap and live data from the SPACEX API.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./spacex_screenshot.png)
 
 ## Built With
 
@@ -14,7 +14,7 @@
 
 ## Live Demo 🚀
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://melaniesigrid.github.io/space_travelers_hub)
 
 
 ## Getting Started

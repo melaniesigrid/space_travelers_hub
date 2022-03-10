@@ -14,7 +14,7 @@ function NavBar() {
           </Navbar.Brand>
         </LinkContainer>
         <Nav className="ms-auto d-flex">
-          <LinkContainer to="/" rel="noopener noreferrer" className="MyLink">
+          <LinkContainer to="/space_travelers_hub/" rel="noopener noreferrer" className="MyLink">
             <Nav.Link>Rockets</Nav.Link>
           </LinkContainer>
 
