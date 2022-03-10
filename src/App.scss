@@ -1,0 +1,74 @@
+@import "~bootstrap/scss/bootstrap";
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.SpaceTravelers .navbar-brand {
+  font-size: 6rem;
+}
+
+.Logo {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.3rem;
+}
+
+.MyProfile {
+  border-left: 1px solid rgb(126, 126, 126);
+}
+
+.Separator {
+  margin-right: 1rem;
+  font-weight: 400;
+}
+
+.HorizontalCard {
+  flex-direction: row !important;
+  margin: 2rem;
+}
+
+.RocketImage {
+  height: 15rem;
+  width: 20rem;
+}
+
+.RocketName {
+  margin-top: 0.2rem;
+}
+
+.CardTextContainer {
+  margin-top: 1.5rem;
+}
+
+.ReserveButton {
+  margin-top: 2em;
+}
+
+.CancelButton {
+  margin-top: 2em;
+}
+
+.ProfileContent {
+  margin-top: 3rem;
+}
+
+@media (max-width: 767px) {
+  .HorizontalCard {
+    flex-direction: column !important;
+    margin: 2rem;
+  }
+
+  .RocketImage {
+    width: 100%;
+  }
+}

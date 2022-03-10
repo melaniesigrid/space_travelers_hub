@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyProfile Component renders correctly 1`] = `
+<div
+  className="ProfileContent"
+>
+  <div
+    className="d-flex container"
+  >
+    <div
+      className="container"
+    >
+      <table
+        className="table table-striped table-bordered table-hover"
+      >
+        <thead>
+          <tr>
+            <th>
+              My Missions
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+    <div
+      className="container"
+    >
+      <table
+        className="table table-striped table-bordered table-hover"
+      >
+        <thead>
+          <tr>
+            <th>
+              My Rockets
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;
