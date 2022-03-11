@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 a,
 a:hover,
@@ -8,19 +9,50 @@ a:active {
   color: inherit;
 }
 
+img {
+  background-color: transparent;
+}
+
+.App {
+  height: 100%
+}
+
+.navbar {
+  width: 100% !important;
+  background: #41295a !important;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a) !important;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F0743, #41295a) !important;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.NavContainer {
+  background-color: transparent;
+}
+
 .LogoContainer {
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
 
-.SpaceTravelers .navbar-brand {
-  font-size: 6rem;
+.navbar-brand {
+  font-size: 1.9rem !important;
+  font-family: 'Kanit', sans-serif;
 }
 
 .Logo {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-right: 1.3rem;
+}
+
+.navbar-toggler-icon, .navbar-collapse,
+.navbar-nav,
+.MyLink, span {
+  background-color: transparent;
 }
 
 .MyProfile {

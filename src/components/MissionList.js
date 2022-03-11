@@ -10,13 +10,13 @@ const MissionList = ({
   return (
     <>
       <tr key={id}>
-        <th scope="row">{name}</th>
-        <td className="w-50">{description}</td>
+        <th scope="row" className="text-light">{name}</th>
+        <td className="w-50 text-light">{description}</td>
         <td>
           {
         reserved
-          ? <span className="badge bg-info">Active Member</span>
-          : <span className="badge bg-secondary">Not a Member</span>
+          ? <span className="badge bg-info text-dark">Active Member</span>
+          : <span className="badge bg-light text-dark">Not a Member</span>
           }
         </td>
         <td>
@@ -25,7 +25,7 @@ const MissionList = ({
               ? (
                 <button
                   type="button"
-                  className="btn btn-outline-info"
+                  className="btn btn-outline-danger"
                   onClick={() => dispatch(leaveMission(id))}
                 >
                   Leave mission
@@ -34,7 +34,7 @@ const MissionList = ({
               : (
                 <button
                   type="button"
-                  className="btn btn-outline-secondary"
+                  className="btn btn-outline-info"
                   onClick={() => dispatch(joinMission(id))}
                 >
                   Join Mission
