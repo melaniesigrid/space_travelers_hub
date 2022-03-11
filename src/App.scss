@@ -20,7 +20,7 @@ img {
 .navbar {
   width: 100% !important;
   background: #41295a !important;
-  background: -webkit-linear-gradient(to right, #2f0743, #41295a) !important;
+  background: -webkit-linear-gradient(to right, #2f0743, #41295a) !important; // eslint-disable-line
   background: linear-gradient(to right, #2f0743, #41295a) !important;
 }
 
