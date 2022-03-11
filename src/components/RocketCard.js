@@ -22,15 +22,15 @@ function RocketCard({
     <Card key={id} expand="md" className="HorizontalCard">
       <Card.Img variant="left" src={flickrImages} className="RocketImage" />
       <Card.Body>
-        <Card.Title className="RocketName">{rocketName}</Card.Title>
+        <Card.Title className="RocketName text-light">{rocketName}</Card.Title>
         {
           reserved
             ? (
               <div>
 
-                <div className="CardTextContainer">
+                <div className="CardTextContainer text-light">
                   <Card.Text>
-                    <Badge bg="info">Reserved</Badge>
+                    <Badge bg="info" className="text-dark">Reserved</Badge>
                     {' '}
                     {description}
                   </Card.Text>
@@ -40,7 +40,7 @@ function RocketCard({
             )
             : (
               <div>
-                <div className="CardTextContainer">
+                <div className="CardTextContainer text-light">
                   <Card.Text>{description}</Card.Text>
                 </div>
                 <Button variant="outline-info" className="ReserveButton" onClick={() => reserveMyRocket(id)}>Reserve Rocket</Button>

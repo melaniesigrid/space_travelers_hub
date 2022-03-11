@@ -12,7 +12,7 @@ function MyProfile() {
     <div className="ProfileContent">
       <Container className="d-flex">
         <Container>
-          <Table striped bordered hover>
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>My Missions</th>
@@ -30,7 +30,7 @@ function MyProfile() {
           </Table>
         </Container>
         <Container>
-          <Table striped bordered hover>
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>My Rockets</th>

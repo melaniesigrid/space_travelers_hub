@@ -11,7 +11,7 @@ import MyProfile from './components/MyProfile';
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-dark App">
       <NavBar />
       <Routes>
         <Route path="/space_travelers_hub/" element={<Rockets />} />

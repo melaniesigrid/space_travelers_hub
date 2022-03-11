@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Table } from 'react-bootstrap';
 import { getMissions } from '../redux/missions';
 import MissionList from './MissionList';
 
@@ -19,7 +20,7 @@ const Missions = () => {
       <br />
       <div className="container">
         <div className="table-responsive">
-          <table className="table table-striped table-bordered">
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th scope="col">Mission</th>
@@ -42,7 +43,7 @@ const Missions = () => {
 
               }
             </tbody>
-          </table>
+          </Table>
         </div>
 
       </div>

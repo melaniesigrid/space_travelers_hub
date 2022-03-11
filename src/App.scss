@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 a,
 a:hover,
@@ -8,19 +9,49 @@ a:active {
   color: inherit;
 }
 
+img {
+  background-color: transparent;
+}
+
+.App {
+  height: 100%;
+}
+
+.navbar {
+  width: 100% !important;
+  background: #41295a !important;
+  /* stylelint-disable-next-line */
+  background: -webkit-linear-gradient(to right, #2f0743, #41295a) !important;
+  background: linear-gradient(to right, #2f0743, #41295a) !important;
+}
+
+.NavContainer {
+  background-color: transparent;
+}
+
 .LogoContainer {
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
 
-.SpaceTravelers .navbar-brand {
-  font-size: 6rem;
+.navbar-brand {
+  font-size: 1.9rem !important;
+  font-family: 'Kanit', sans-serif;
 }
 
 .Logo {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-right: 1.3rem;
+}
+
+.navbar-toggler-icon,
+.navbar-collapse,
+.navbar-nav,
+.MyLink,
+span {
+  background-color: transparent;
 }
 
 .MyProfile {
@@ -62,13 +93,46 @@ a:active {
   margin-top: 3rem;
 }
 
+@media (max-width: 1200px) {
+  .RocketImage {
+    height: 20rem;
+    width: 25rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .RocketImage {
+    background-color: #212529;
+    object-fit: cover;
+    height: 28rem;
+  }
+}
+
 @media (max-width: 767px) {
   .HorizontalCard {
     flex-direction: column !important;
-    margin: 2rem;
+    margin: 0.8rem 0.8rem 2.5rem 0.8rem;
   }
 
   .RocketImage {
-    width: 100%;
+    height: auto;
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-brand {
+    font-size: 1.4rem !important;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .Logo {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-right: 1rem;
+  }
+
+  .CancelButton {
+    margin-top: 1em;
   }
 }
