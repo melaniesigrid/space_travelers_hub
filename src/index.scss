@@ -1,5 +1,7 @@
 * {
-  html, body, #root {
+  html,
+  body,
+  #root {
     background-color: #212529;
     height: 100%;
     margin: 0;
@@ -34,8 +36,8 @@
       "Courier New",
       monospace;
   }
+
   background-color: #212529;
 }
-
 
 @import "~bootstrap/scss/bootstrap.scss";
